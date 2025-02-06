@@ -46,12 +46,13 @@ To set up the environment, follow these steps:
 ## Usage
 1. **Dataloader**: Load the dataset using `dataset.py`.
 2. **Select Images for Training**: Filter images for training using `filter_image.py`.
-3. **Convert DICOM to PNG**: Convert DICOM images to PNG format using `DICOM_TO_PNG.py`.
-4. **Train Models**:
+3. **Prepare the classification labels**: Please use `label preparation.py`.
+4. **Convert DICOM to PNG**: Convert DICOM images to PNG format using `DICOM_TO_PNG.py`.
+5. **Train Models**:
    - Train ResNet using `train.py`.
    - Train Swin Transformer using `train_swin.py`.
-5. **Evaluate Metrics**: Evaluate model metrics using `eval_race_ethnic.py`.
-6. **Fairness Evaluation**: Evaluate Equalized Odds using `EqOdd_Hispanic_Non_Hispanic.py`.
+6. **Evaluate Metrics**: Evaluate model metrics using `eval_race_ethnic.py`.
+7. **Fairness Evaluation**: Evaluate Equalized Odds using `EqOdd_Hispanic_Non_Hispanic.py`.
 
 ## Results
 The fairness evaluation showed variations in model performance across different racial and ethnic groups, particularly highlighting areas where the models fail to maintain equitable performance.
