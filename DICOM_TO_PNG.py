@@ -68,7 +68,7 @@ class DCM_Tags:
 
 
 # Load the CSV file
-file_path = "unique_images_filtered.csv"
+file_path = "filtered_images_path_labels.csv"
 df = pd.read_csv(file_path)
 
 # Process each DICOM file and save as PNG

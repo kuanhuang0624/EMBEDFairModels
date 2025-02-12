@@ -8,7 +8,7 @@ import random
 import torchvision.models as models
 import torch.optim as optim
 from sklearn.model_selection import train_test_split
-from dataset2 import MammoDataset
+from dataset import MammoDataset
 import torch.nn as nn
 
 is_cuda_available = torch.cuda.is_available()
@@ -28,7 +28,7 @@ torch.backends.cudnn.deterministic = True
 torch.backends.cudnn.benchmark = False
 
 # Load the filtered CSV file
-file_path = "unique_images_filtered.csv"
+file_path = "final_image_with_label.csv"
 df = pd.read_csv(file_path)
 
 # Update paths
@@ -165,4 +165,4 @@ plt.figure(0)
 plt.plot(epoch_training_loss)
 plt.plot(epoch_test_loss)
 plt.show()
-torch.save(model, "./save_models/resnet50_new4.pt")
+torch.save(model, "./save_models/resnet50.pt")
